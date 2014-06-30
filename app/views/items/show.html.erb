@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dinner:</strong>
+  <%= @item.Dinner %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @item.title %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @item.city %>
+</p>
+
+<p>
+  <strong>Attendence:</strong>
+  <%= @item.attendence %>
+</p>
+
+<p>
+  <strong>Followup ownedby:</strong>
+  <%= @item.followup_ownedby %>
+</p>
+
+<p>
+  <strong>Followup status:</strong>
+  <%= @item.followup_status %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @item.comments %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @item.company %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @item.role %>
+</p>
+
+<p>
+  <strong>Emailaddress:</strong>
+  <%= @item.emailaddress %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @item.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @item.phone %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
