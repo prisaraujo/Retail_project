@@ -1,65 +1,74 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="container-custom">
+      <h1 class="page-header">ThoughtWorks Retail Dinners</h1>
+      <div class="show-page">
+        <p id="notice"><%= notice %></p>
 
+        <p>
+          <strong>Dinner title:</strong>
+          <%= @item.title %>
+        </p>
 
-<p>
-  <strong>Dinner title:</strong>
-  <%= @item.title %>
-</p>
+        <p>
+          <strong>City:</strong>
+          <%= @item.city %>
+        </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @item.city %>
-</p>
+        <p>
+          <strong>Attended/No Show:</strong>
+          <%= @item.attendence %>
+        </p>
 
-<p>
-  <strong>Attended/No Show:</strong>
-  <%= @item.attendence %>
-</p>
+        <p>
+          <strong>Follow-up owned by:</strong>
+          <%= @item.followup_ownedby %>
+        </p>
 
-<p>
-  <strong>Follow-up owned by:</strong>
-  <%= @item.followup_ownedby %>
-</p>
+        <p>
+          <strong>Follow-up status:</strong>
+          <%= @item.followup_status %>
+        </p>
 
-<p>
-  <strong>Follow-up status:</strong>
-  <%= @item.followup_status %>
-</p>
+        <p>
+          <strong>Comments:</strong>
+          <%= @item.comments %>
+        </p>
 
-<p>
-  <strong>Comments:</strong>
-  <%= @item.comments %>
-</p>
+        <p>
+          <strong>Name:</strong>
+          <%= @item.name %>
+        </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
+        <p>
+          <strong>Company:</strong>
+          <%= @item.company %>
+        </p>
 
-<p>
-  <strong>Company:</strong>
-  <%= @item.company %>
-</p>
+        <p>
+          <strong>Role:</strong>
+          <%= @item.role %>
+        </p>
 
-<p>
-  <strong>Role:</strong>
-  <%= @item.role %>
-</p>
+        <p>
+          <strong>E-mail address:</strong>
+          <%= @item.emailaddress %>
+        </p>
 
-<p>
-  <strong>E-mail address:</strong>
-  <%= @item.emailaddress %>
-</p>
+        <p>
+          <strong>Address:</strong>
+          <%= @item.address %>
+        </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @item.address %>
-</p>
+        <p>
+          <strong>Phone:</strong>
+          <%= @item.phone %>
+        </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @item.phone %>
-</p>
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+        <%= link_to 'Edit', edit_item_path(@item) %> |
+        <%= link_to 'Back', items_path %>
+      </div>
+    </div>
+  </body>
+</html>

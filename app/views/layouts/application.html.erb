@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RetailDinners</title>
+  <title>Retail Dinners</title>
   <%= stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css", "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js", "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <style type="text/css" src="././assets/stylesheets/bootstrap.css"></style>
+  <style type="text/css" src="././assets/stylesheets/bootstrap.min.css"></style>
+  <style type="text/css" src="././assets/stylesheets/application.css"></style>
+  <style type="text/css" src="././assets/stylesheets/application.js"></style>
+  <style type="text/css" src="././assets/stylesheets/bootstrap.js"></style>
+
 </head>
 <body>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div>
+				<a href="#" class="navbar-brand">Home</a>
+				<ul class="nav navbar-nav">
+					<li class="active"><%= link_to "Dinners", items_path %></li>
+					<li><a href="#">Profile</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<ul class="nav nav-pills nav-stacked" id="nav-stacked">
+	  <li class="active"><a href="#">Home</a></li>
+	  <li><a href="#">Profile</a></li>
+	  <li><%= link_to "Dinners", items_path %></a></li>
+	</ul>
 
 <%= yield %>
+
+<!--footer-->
+<div class="footer">Retail Dinners Follow-ups - ThoughtWorks</div>
 
 </body>
 </html>
