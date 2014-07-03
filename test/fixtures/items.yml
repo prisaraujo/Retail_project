@@ -1,7 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  Dinner: MyString
   title: MyString
   city: MyString
   attendence: MyString
@@ -16,7 +15,6 @@ one:
   phone: MyString
 
 two:
-  Dinner: MyString
   title: MyString
   city: MyString
   attendence: MyString
