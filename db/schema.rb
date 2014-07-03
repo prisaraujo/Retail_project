@@ -14,7 +14,6 @@
 ActiveRecord::Schema.define(version: 20140702215715) do
 
   create_table "items", force: true do |t|
-    t.string   "Dinner"
     t.string   "title"
     t.string   "city"
     t.string   "attendence"

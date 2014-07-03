@@ -10,7 +10,7 @@
 
   <div class="container-custom">
     <h1 class="page-header">ThoughtWorks Retail Dinners</h1>
-    <table class="DinnersTable">
+    <table class="table-striped table-bordered">
       <thead>
         <tr id="dinner_labels">
           <th>Dinner title</th>
@@ -32,7 +32,7 @@
       <tbody>
         <div class="items">
           <% @items.each do |item| %>
-            <tr>
+            <tr id="pad">
               <td><%= item.title %></td>
               <td><%= item.city %></td>
               <td><%= item.attendence %></td>

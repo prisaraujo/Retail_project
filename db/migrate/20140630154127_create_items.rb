@@ -1,7 +1,6 @@
 class CreateItems < ActiveRecord::Migration
   def change
     create_table :items do |t|
-      t.string :Dinner
       t.string :title
       t.string :city
       t.string :attendence

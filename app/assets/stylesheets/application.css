@@ -5,26 +5,32 @@
 
 /*---The fix nav bar needs this padding to show up the content properly*/
 body {
-	padding-top: 40px;
+	padding-top: 50px;
 }
 
 /*---Containers---*/
 .container-custom {
 	width: 75%;
-	margin-left: 320px;
+	margin-left: 280px;
+	margin-top:0;
 }
 
 /*---Nav from bootstrap customization---*/
 #nav-stacked{
 	width: 200px;
 	float: left;
-	margin-top: 50px;
+	margin-top: 45px;
 }
 
 /*---Title of the page---*/
 #title {
 	text-align: center;
 	margin-bottom: 30px;
+}
+
+/*--Float right--*/
+.fright {
+	float:right;
 }
 
 /*---Retail dinner table---*/
@@ -68,13 +74,23 @@ body {
 	color: white;
 	text-decoration: none;
 }
+#dinner_labels th {
+	padding:3px;
+}
 
+/*padding nas celulas*/
+#pad td{
+	padding:3px;
+}
 /*---Forms---*/
 .form {
 
 }
 
 /*---buttons customized*/
+#button-custom {
+	margin-top: 20px;
+}
 #button-custom a{
 	color:white;
 }
@@ -97,6 +113,12 @@ body {
 #submit-btn {
 	border-radius: 8px;
 }
+
+/*Alert bar error*/
+.alert {
+	display:none;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

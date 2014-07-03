@@ -3,3 +3,9 @@ priscila:
     last_name: "Araujo"
     email: "pri@example.ca"
     profile_name: "priaraujo"
+
+patricia:
+    first_name: "Patricia"
+    last_name: "Araujo"
+    email: "paty@example.ca"
+    profile_name: "patyaraujo"

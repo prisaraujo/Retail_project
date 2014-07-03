@@ -13,6 +13,8 @@
 
 </head>
 <body>
+	<!--if want to fix the navbar, so when scroll it stays there add -fixed- as:
+	<div class="navbar navbar-fixed-top">-->
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div>
@@ -21,15 +23,27 @@
 					<li class="active"><%= link_to "Dinners", items_path %></li>
 					<li><a href="#">Profile</a></li>
 				</ul>
-				<ul class="nav navbar-nav navbar-right">
-			        <li><%= link_to "Sign In", user_session_path%></li>
-			        <li class="dropdown">
-			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <span class="caret"></span></a>
-			          <ul class="dropdown-menu" role="menu">
-			            <li><a href="#">Show profile information</a></li>
-			            <li><a href="#">Dinners that I created</a></li>
-			          </ul>
-			        </li>
+				<ul class="nav navbar-nav navbar-right fright">
+					<% if current_user.present? %>
+						<ul class="nav navbar-nav">
+							<li>Logged in as <strong><%= current_user.email %></strong></li>
+					        <li><%= link_to "Edit profile", edit_user_registration_path, :class => 'navbar-link' %></li>
+					        <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+				        </ul>
+				    <% else %>
+				    	<ul class="nav navbar-nav">
+							<li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
+							<li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+						</ul>
+				        <!--
+				        <li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <span class="caret"></span></a>
+				          <ul class="dropdown-menu" role="menu">
+				            <li><a href="#">Show profile information</a></li>
+				            <li><a href="#">Dinners that I created</a></li>
+				          </ul>
+				        </li>-->
+			        <% end %>
 			    </ul>
 			</div>
 		</div>
