@@ -21,6 +21,16 @@
 					<li class="active"><%= link_to "Dinners", items_path %></li>
 					<li><a href="#">Profile</a></li>
 				</ul>
+				<ul class="nav navbar-nav navbar-right">
+			        <li><%= link_to "Sign In", user_session_path%></li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <span class="caret"></span></a>
+			          <ul class="dropdown-menu" role="menu">
+			            <li><a href="#">Show profile information</a></li>
+			            <li><a href="#">Dinners that I created</a></li>
+			          </ul>
+			        </li>
+			    </ul>
 			</div>
 		</div>
 	</div>
