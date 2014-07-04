@@ -1,4 +1,4 @@
-class ItemsController < ApplicationController
+class ItemsController < ApplicationController  
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   # GET /items
@@ -72,3 +72,4 @@ class ItemsController < ApplicationController
       params.require(:item).permit(:title, :city, :attendence, :followup_ownedby, :followup_status, :comments, :name, :company, :role, :emailaddress, :address, :phone)
     end
 end
+

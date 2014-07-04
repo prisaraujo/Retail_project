@@ -42,3 +42,5 @@ gem 'spring',        group: :development
 
 gem 'simple-navigation'
 gem 'simple-navigation-bootstrap'
+
+gem 'filter_me', "0.1.2"

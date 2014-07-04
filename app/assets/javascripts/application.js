@@ -17,3 +17,14 @@
 //= require turbolinks
 //= require_tree .
 $('.collapse').collapse()
+
+function filter_table(){
+	var $rows = $('#table tr');
+	var val = $.trim($("#search").val()).replace(/ +/g, ' ').toLowerCase();
+
+	$rows.show().filter(function() {
+		var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+		return !~text.indexOf(val);
+	}).hide();
+	$("#dinner_labels").show();
+}
