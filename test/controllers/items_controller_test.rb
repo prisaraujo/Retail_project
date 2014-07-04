@@ -18,7 +18,7 @@ class ItemsControllerTest < ActionController::TestCase
 
   test "should create item" do
     assert_difference('Item.count') do
-      post :create, item: { Dinner: @item.Dinner, address: @item.address, attendence: @item.attendence, city: @item.city, comments: @item.comments, company: @item.company, emailaddress: @item.emailaddress, followup_ownedby: @item.followup_ownedby, followup_status: @item.followup_status, name: @item.name, phone: @item.phone, role: @item.role, title: @item.title }
+      post :create, item: { title: @item.title, city: @item.city, attendence: @item.attendence, followup_ownedby: @item.followup_ownedby, followup_status: @item.followup_status, comments: @item.comments, name: @item.name, company: @item.company, role: @item.role, emailaddress: @item.emailaddress, address: @item.address, phone: @item.phone }
     end
 
     assert_redirected_to item_path(assigns(:item))
@@ -35,7 +35,7 @@ class ItemsControllerTest < ActionController::TestCase
   end
 
   test "should update item" do
-    patch :update, id: @item, item: { Dinner: @item.Dinner, address: @item.address, attendence: @item.attendence, city: @item.city, comments: @item.comments, company: @item.company, emailaddress: @item.emailaddress, followup_ownedby: @item.followup_ownedby, followup_status: @item.followup_status, name: @item.name, phone: @item.phone, role: @item.role, title: @item.title }
+    patch :update, id: @item, item: { title: @item.title, city: @item.city, attendence: @item.attendence, followup_ownedby: @item.followup_ownedby, followup_status: @item.followup_status, comments: @item.comments, name: @item.name, company: @item.company, role: @item.role, emailaddress: @item.emailaddress, address: @item.address, phone: @item.phone }
     assert_redirected_to item_path(assigns(:item))
   end
 
