@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  # attr_accessible :email, :password, :password_confirmation
+
   validates :first_name, presence: true
 
   validates :last_name, presence: true
@@ -13,8 +15,7 @@ class User < ActiveRecord::Base
                                           format:{
                                             with: /\A[a-zA-Z0-9_-]+\z/,
                                             message: "Must be formatted correctly."
-                                          }
-                                        
+                                          }                                        
   def full_name
   	first_name + " " + last_name
   end

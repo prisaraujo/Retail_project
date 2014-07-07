@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController  
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
+  before_filter :allow_params_authentication!, :only => :create
+
   # GET /items
   # GET /items.json
   def index
