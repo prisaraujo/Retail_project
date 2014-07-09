@@ -10,8 +10,6 @@
 
 </head>
 <body>
-	<!--if want to fix the navbar, so when scroll it stays there add -fixed- as:
-	<div class="navbar navbar-fixed-top">-->
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div>
@@ -47,9 +45,12 @@
 	</div>
 
 	<ul class="nav nav-pills nav-stacked" id="nav-stacked">
-	  <li class="active"><a href="#">Home</a></li>
-	  <li><a href="#">Profile</a></li>
-	  <li><%= link_to "Dinners", items_path %></a></li>
+	  <li class="active"><%= link_to "Dinners", items_path %></li>
+	  <li><a href="#">Chicago</a></li>
+	  <li><a href="#">Dallas</a></li>
+	  <li><a href="#">New York City</a></li>
+	  <li><a href="#">San Francisco</a></li>
+	  <li><a href="#">Toronto</a></li>
 	</ul>
 
 	<!-- <p class="notice"><%= notice %></p>

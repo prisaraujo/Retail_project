@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :items
   root to: 'items#index'
   resources :filter
+  resources :cities
+  resources :profile
 
   post "/users/sign_in" => "sessions#create"
   delete "/users/sign_out" => "sessions#destroy"
