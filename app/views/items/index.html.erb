@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style type="text/css" src="././assets/stylesheets/bootstrap.css"></style>
-    <style type="text/css" src="././assets/stylesheets/application.css"></style>
   </head>
 
   <div class="container-custom">
     <h1 class="page-header">ThoughtWorks Retail Events</h1>
       Search: <input type="text" id="search" onkeyup="filter_table()" placeholder="Type to search"> <br /><br>
-      <table class="table-striped table-bordered" id="table">
+      <div id="table">
+      <table class="table-striped table-bordered">
         <thead>
           <tr id="dinner_labels">
             <th>Event title</th>
@@ -36,7 +35,31 @@
                 <td><%= item.attendence %></td>
                 <td><%= item.followup_ownedby %></td>
                 <td><%= item.followup_status %></td>
-                <td><%= item.comments %></td>
+                <td>
+                  <%= item.comments %>
+                  <button id="openBtn" type="button" class="btn btn-info btn-mini" data-toggle="modal" data-target="#myModal">
+                    Click here to update
+                  </button>
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div id="myModal" class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">ThoughtWorks Retail Events - Comments</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p><b>Comments:</b></p>
+                        <p><%= item.comments %></p>
+                        <iframe src="comments/new" style="zoom:0.60" width="99.6%" height="550" frameborder="0"></iframe>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </td>
                 <td><%= item.name %></td>
                 <td><%= item.company %></td>
                 <td><%= item.role %></td>
@@ -51,6 +74,7 @@
           </div>
         </tbody>
     </table>
+    </div>
     <button type="button" class="btn btn-primary" id="button-custom">
       <%= link_to 'New Item', new_item_path %>
     </button>

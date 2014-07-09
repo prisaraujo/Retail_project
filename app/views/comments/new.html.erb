@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css", "application", media: "all", "data-turbolinks-track" => true %>
+		<%= csrf_meta_tags %>
+		<%= javascript_include_tag 'application.js' %>
+		<script type="text/javascript" src="././assets/javascript/bootstrap.js"></script>
+		<script type="text/javascript" src="././assets/javascript/comments.js"></script>
+		<style type="text/css" src="././assets/stylesheets/application.css"></style>
+	</head>
+
+	<%= form_for(@item) do |f| %>
+	  <% if @item.errors.any? %>
+	    <div class="" id="error_explanation">
+	      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+	      <ul>
+	      <% @item.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+	  <div class="field form-group">
+	    <%= f.label :title %><br>
+	    <p><%= f.text_field :title %></p>
+	  </div>
+	  <div class="field form-group">
+	    <%= f.label :city %><br>
+	    <%= f.text_field :city %>
+	  </div>
+	  <div class="field form-group">
+	    <label>Attended/No Show</label><br>
+	    <%= f.text_field :attendence %>
+	  </div>
+	  
+	<% end %>
+
+
+
+	<input value="write your comment here" />
+	<button type="submit" class="btn btn-primary btn-small" id="button-modal">Add comment</button>
+	<!-- <input type="button" id="filter" class="btn btn-primary btn-small" name="filter" value="Add a updated comment" /> -->
+    <!-- <button class="btn btn-primary btn-small" id="button-modal">
+      <%= link_to 'Add a updated comment', new_comment_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
+    </button> -->
+</html>

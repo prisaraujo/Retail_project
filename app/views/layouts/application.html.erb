@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Retail Dinners</title>
+  <title>Retail Events</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <%= stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css", "application", media: "all", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%= javascript_include_tag 'application.js' %>
-  <style type="text/css" src="././assets/stylesheets/bootstrap.css"></style>
+  <script type="text/javascript" src="././assets/javascript/bootstrap.js"></script>
   <style type="text/css" src="././assets/stylesheets/application.css"></style>
+
 
 </head>
 <body>
@@ -45,7 +48,7 @@
 	</div>
 
 	<ul class="nav nav-pills nav-stacked" id="nav-stacked">
-	  <li class="active"><%= link_to "Dinners", items_path %></li>
+	  <li class="active"><%= link_to "Events", items_path %></li>
 	  <li><a href="#">Chicago</a></li>
 	  <li><a href="#">Dallas</a></li>
 	  <li><a href="#">New York City</a></li>

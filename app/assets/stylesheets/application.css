@@ -77,6 +77,11 @@ body {
 	padding:3px;
 }
 
+#table {
+	overflow: auto;
+	height: 500px;
+}
+
 /*padding nas celulas*/
 #pad td{
 	padding:3px;
@@ -122,6 +127,19 @@ body {
 #logged {
 	margin-top: 15px;
 }
+
+/*Button extra small*/
+#button-xs {
+	font-size: 10px;
+	text-align: center; 
+}
+
+/* Modal customization */
+#button-modal a {
+	color:white;
+	text-decoration: none;
+}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
